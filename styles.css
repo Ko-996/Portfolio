@@ -1,0 +1,28 @@
+body{
+    background-color:  #121212 /*#101922*/;
+    font-family: 'System-ui';
+    color: white;
+    
+}
+
+header{
+    background-color: #101010;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 10vw;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #404040;
+}
+
+.profile{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 100%;
+}
