@@ -7,13 +7,12 @@
         <meta name="description" content="Junior web developer portfolio with frontend and backend projects">
         <meta name="theme-color" content="black">
         <link rel="icon" type="image/jpg" href="/images">
-        <link rel="stylesheet" href="normalize.css">
+        <!-- <link rel="stylesheet" href="normalize.css"> -->
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header class="bar"> 
             
-            <img class="profile" src="/public/images/me.webp" alt="Kevin Ovalle picture" width="1062" height="1267" >
             <!--<h1>Kevin Ovalle</h1>-->
             <nav>
                 <a href="#home">Home</a>
@@ -24,39 +23,40 @@
         </header> 
         <hr class="line">
         <main>
-            <section id="about-me">
-                <h2>Hi, I am Kevin Ovalle</h2>
+            <section id="about-me" class="about">
+                <img class="profile" src="/public/images/me.webp" alt="Kevin Ovalle picture" width="1062" height="1267" >
+                <h1>Hi, I am Kevin Ovalle</h1>
                 <p>Junior web developer based in Quetzaltenango, Guatemala. I enjoy learning new technologies
-                and building projects. I have experience developing some backend and frontend
+                and building projects. I have experience developing some backend, frontend and fullstack
                 projects.</p>
-                <article>
-                    <h3>Tech stack</h3>
-                    <p>Technologies and tools that I have learned</p>
-                    <img src="/public/images/html5.svg" alt="Html logo" width="100" height="100">
-                    <img src="/public/images/css.svg" alt="Css logo" width="100" height="100">
-                    <img src="/public/images/javascript.svg" alt="Javascript logo" width="100" height="100">
-                    <img src="/public/images/react.svg" alt="React logo" width="100" height="100">
-                    <img src="/public/images/mysql.svg" alt="MySQL logo" width="100" height="100">
-                    <img src="/public/images/postgresql.svg" alt="PostgreSQL logo" width="100" height="100">
-                    <img src="/public/images/nodejs.svg" alt="Nodejs logo" width="100" height="100">
-                    <img src="/public/images/git.svg" alt="Git logo" width="100" height="100">
-                    <img src="/public/images/typescript.svg" alt="Typescript logo" width="100" height="100">
-                </article>
-
             </section>
+            <article class="tech">
+                <h2>Tech stack</h2>
+                <p>Technologies and tools that I have learned</p>
+                <img src="/public/images/html5.svg" alt="Html logo" width="100" height="100">
+                <img src="/public/images/css.svg" alt="Css logo" width="100" height="100">
+                <img src="/public/images/javascript.svg" alt="Javascript logo" width="100" height="100">
+                <img src="/public/images/react.svg" alt="React logo" width="100" height="100">
+                <img src="/public/images/mysql.svg" alt="MySQL logo" width="100" height="100">
+                <img src="/public/images/postgresql.svg" alt="PostgreSQL logo" width="100" height="100">
+                <img src="/public/images/nodejs.svg" alt="Nodejs logo" width="100" height="100">
+                <img src="/public/images/git.svg" alt="Git logo" width="100" height="100">
+                <img src="/public/images/typescript.svg" alt="Typescript logo" width="100" height="100">
+            </article>
+
             <section id="projects">
                 <h2>Projects</h2>
                 <p></p>
-
+                
                 <article>
-                    <h3>Cuentos</h3>
+                    <h3>Dmm</h3>
                     <p>Description</p>
                     <img src="/images/cuentos.jpg" alt="Screenshot of cuentos website" width="500" height="500">
                     <a href="/cuentos">See more</a>
                 </article>
 
                 <article>
-                    <h3>Dmm</h3>
+                    <h3>Cuentos</h3>
                     <p>Description</p>
                     <img src="/images/cuentos.jpg" alt="Screenshot of cuentos website" width="500" height="500">
                     <a href="/cuentos">See more</a>
@@ -76,7 +76,7 @@
                 <a href="linkedin.com"><img src="/public/images/linkedin.svg" alt="Linkedin logo" width="100" height="100"></a>
                 <a href="github.com"><img src="/public/images/github_dark.svg" alt="Github Logo" width="100px" height="100px"></a>
             </section>
-            
+
         </main>
         <footer>
 
