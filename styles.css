@@ -63,7 +63,7 @@ hr{
 .about img{
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-    justify-self: start;
+    justify-self: center;
     align-self: center;
 }
 
@@ -222,6 +222,43 @@ hr{
     }
 }
 
+.container-contact{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: auto;
+}
 
+.container-contact h2{
+    place-self: center;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    font-size: 2.5rem;
+}
+
+.container-contact p{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    place-self: end;
+}
+
+.container-contact div{
+    grid-column: 3/4;
+    grid-row: 3/4;
+    place-self: center;
+}
+
+.container-contact a{
+    place-self: end;
+
+}
+
+.container-contact img{
+    margin: 1rem 0 1rem 0;
+    padding: .1rem;
+    width: 3em;
+    height: 3em;
+    place-self: end;
+}
 
 
