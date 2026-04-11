@@ -45,12 +45,37 @@ hr{
 }
 
 .profile{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
     object-fit: cover;
+    transition-duration: 300ms;
+    transition-timing-function: steps(60);
+    
+    /*border-radius: 50%;
     max-width: 100%;
-    box-shadow: 0 0 10px rgb(58, 58, 139);
+    box-shadow: 0 0 10px rgb(58, 58, 139);*/
+}
+
+@media (width < 1100px){
+    .profile{
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media (width < 940px){
+    .profile{
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (width < 750px){
+    .profile{
+        width: 90px;
+        height: 90px;
+    }
 }
 
 .about{
@@ -188,10 +213,13 @@ hr{
 }
 
 .card {
+    width: 440px;
+    height: 379px;
+    display: grid;
     place-self: center;
     border: 1px solid #404040;
     border-radius: .5rem;
-
+    
 }
 
 .card:first-child{
@@ -222,6 +250,29 @@ hr{
     }
 }
 
+.card h3{
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.card p{
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.card em{
+    color: white;
+}
+
+.card img{
+    width: 400px;
+    height: 300px;
+    place-self: center;
+    &:hover{
+        scale: 1.05;
+    }
+}
+
 .container-contact{
     margin-top: 2rem;
     display: grid;
@@ -230,7 +281,9 @@ hr{
 }
 
 .container-contact h2{
-    place-self: center;
+    align-self: center;
+    justify-self: end;
+    margin-right: 1rem;
     grid-column: 2/3;
     grid-row: 1/4;
     font-size: 2.5rem;
@@ -239,7 +292,7 @@ hr{
 .container-contact p{
     grid-column: 3/4;
     grid-row: 2/3;
-    place-self: end;
+    place-self: center;
 }
 
 .container-contact div{
@@ -248,17 +301,11 @@ hr{
     place-self: center;
 }
 
-.container-contact a{
-    place-self: end;
-
-}
-
 .container-contact img{
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0.5rem 1rem 0.5rem;
     padding: .1rem;
     width: 3em;
     height: 3em;
-    place-self: end;
 }
 
 
