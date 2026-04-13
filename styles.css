@@ -245,12 +245,12 @@ hr{
 }
 
 .card {
-    width: 440px;
-    height: 379px;
+    width: 420px;
+    height: 380px;
     display: grid;
     place-self: center;
-    border: 1px solid #404040;
-    border-radius: .5rem;
+    border: 3px solid #404040;
+    border-radius: 8px;
     
 }
 
@@ -258,13 +258,14 @@ hr{
     grid-column: 2/3;
     grid-row: auto; 
 }
+/*
 .card:nth-child(2){
     grid-column: 3/4;
     grid-row: auto;
-}
+}*/
 
 .card:last-child{
-    grid-column: 2/3;
+    grid-column: 3/4;
     grid-row: auto;
 }
 
@@ -284,24 +285,34 @@ hr{
 
 .card h3{
     text-align: center;
-    margin-top: .5rem;
 }
 
 .card p{
-    margin: 0.5rem;
     text-align: center;
+    margin-top: -1.5rem;
 }
 
-.card em{
+.card strong {
+    background-color: rgba(87, 168, 243, 0.6);
+    border-radius: 5%;
     color: white;
 }
 
-.card img{
-    width: 400px;
-    height: 300px;
-    place-self: center;
+.card-image{
+    width: 415.2px;
+    height: 220px;
+    overflow: hidden;
+    place-self: start;
+    border-radius: 6px 6px 0 0;
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
     &:hover{
-        scale: 1.05;
+        scale: 1.08;
     }
 }
 
