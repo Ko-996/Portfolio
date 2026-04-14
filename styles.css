@@ -5,16 +5,25 @@
     box-sizing: border-box;
 }
     
+:root{
+    --primary-color: #121212;
+    --secondary-color: #101010;
+    --primary-dark: #141515; 
+    --secondary-dark: #2b2d2f;
+    --primary-light-color: rgb(250, 250, 250);
+    --secondary-light-color: #eaeaea;
+    --border-color: #404040;
+}
 
 body{
-    background-color:  #121212 /*#101922*/;
+    background-color: var(--primary-color) /*#101922*/;
     font-family: 'System-ui';
-    color: white;
+    color: var(--primary-light-color);
     min-height: 100vh;
     }
 
 header{
-    background-color: #101010;
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     box-sizing: border-box;
@@ -28,20 +37,20 @@ header nav{
 }
 
 header a{
-        color: white;
+        color: var(--primary-light-color);
         text-decoration: none;
         padding: 1.5rem;
         transition-duration: 0.2s;
         &:hover{
             scale: 1.1;
-            text-shadow: 0 0 5px rgb(250, 250, 250);
+            text-shadow: 0 0 5px var(--primary-light-color);
         }
     }
 
 hr{
     border: none;
     height: 1px;
-    background-color: #404040;
+    background-color: var(--border-color);
 }
 
 .profile{
@@ -80,6 +89,7 @@ hr{
     margin-top: 1rem;
     grid-column: 3/4;
     font-size: 1rem;
+    color: var(--secondary-light-color);
 }
 
 @media (width < 1100px){
@@ -125,7 +135,7 @@ hr{
     display: grid;
     grid-template-columns: 1fr 1fr 3fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    margin-top: 6rem;
+    margin-top: 5rem;
 }
 
 .tech h2{
@@ -138,6 +148,7 @@ hr{
 .tech p{
     grid-row: 2/3;
     grid-column: 2/4 ; 
+    color: var(--secondary-light-color);
 }
 
 .tech div{
@@ -249,8 +260,9 @@ hr{
     height: 380px;
     display: grid;
     place-self: center;
-    border: 3px solid #404040;
+    border: 3px solid var(--border-color);
     border-radius: 8px;
+    background-color: var(--primary-dark);
     
 }
 
@@ -284,18 +296,23 @@ hr{
 }
 
 .card h3{
+    margin-top: 0rem;
     text-align: center;
 }
 
 .card p{
     text-align: center;
-    margin-top: -1.5rem;
+    margin: 0rem .5rem .5rem .5rem;
+    color: var(--secondary-light-color);
 }
 
-.card strong {
-    background-color: rgba(87, 168, 243, 0.6);
-    border-radius: 5%;
-    color: white;
+.card span{
+    display: inline-block;
+    padding: .1rem .5rem;
+    background-color: var(--secondary-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: whitesmoke;
 }
 
 .card-image{
@@ -311,8 +328,18 @@ hr{
     height: 100%;
     object-fit: cover;
     border-radius: 6px 6px 0 0;
+    transition-duration: 300ms;
     &:hover{
         scale: 1.08;
+    }
+}
+
+.card a{
+    place-self: center;
+    color: wheat;
+    gap: rem;
+    &:hover{
+        color: whitesmoke;
     }
 }
 
