@@ -23,11 +23,15 @@ body{
     }
 
 header{
-    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: color-mix(in srgb, var(--secondary-color) 78%, transparent);
+    backdrop-filter: blur(14px); 
     box-sizing: border-box;
-    height: 5vw;
+    min-height: 5vw;
 }
 
 header nav{
