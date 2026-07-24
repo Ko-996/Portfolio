@@ -280,7 +280,12 @@ hr{
     border: 3px solid var(--border-color);
     border-radius: 8px;
     background-color: var(--primary-dark);
-    
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .card:first-child{
@@ -346,6 +351,7 @@ hr{
     object-fit: cover;
     border-radius: 6px 6px 0 0;
     transition-duration: 300ms;
+    transition-timing-function: ease;
     &:hover{
         scale: 1.08;
     }
