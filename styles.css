@@ -70,6 +70,42 @@ hr{
     box-shadow: 0 0 10px rgb(58, 58, 139);*/
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 800ms ease-in-out,
+        transform 800ms ease-in-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 800ms ease-in-out,
+        transform 800ms ease-in-out;
+}
+
+.reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 800ms ease-in-out,
+        transform 800ms ease-in-out;
+}
+
+.reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .about{
     padding-top: 4rem;
     display: grid;
@@ -280,7 +316,7 @@ hr{
     border: 3px solid var(--border-color);
     border-radius: 8px;
     background-color: var(--primary-dark);
-    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+    transition: transform 800ms ease, box-shadow 300ms ease, border-color 300ms ease;
 }
 
 .card:hover {
@@ -350,7 +386,7 @@ hr{
     height: 100%;
     object-fit: cover;
     border-radius: 6px 6px 0 0;
-    transition-duration: 300ms;
+    transition-duration: 600ms;
     transition-timing-function: ease;
     &:hover{
         scale: 1.08;
@@ -400,5 +436,4 @@ hr{
     width: 3em;
     height: 3em;
 }
-
 

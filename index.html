@@ -21,17 +21,17 @@
         </header> 
         <hr class="line">
         <main>
-            <section id="about-me" class="about">
-                <img class="profile" src="/public/images/me.webp" alt="Kevin Ovalle picture" width="1062" height="1267" >
-                <h1>Hi, I am Kevin Ovalle</h1>
-                <p>Junior web developer based in Quetzaltenango, Guatemala. I enjoy learning new technologies
+            <section id="about-me" class="about reveal">
+                <img class="profile reveal" src="/public/images/me.webp" alt="Kevin Ovalle picture" width="1062" height="1267" >
+                <h1 class="reveal">Hi, I am Kevin Ovalle</h1>
+                <p class="reveal">Junior web developer based in Quetzaltenango, Guatemala. I enjoy learning new technologies
                 and building projects. I have experience developing some backend, frontend and fullstack
                 projects.</p>
             </section>
-            <article class="tech">
+            <article class="tech reveal">
                 <h2>Tech stack</h2>
                 <p>Technologies and tools that I have learned.</p>
-                <div>
+                <div class="reveal">
                 <img class="images-animation" src="/public/images/html5.svg" alt="Html logo" width="100" height="100">
                 <img class="images-animation" src="/public/images/css.svg" alt="Css logo" width="100" height="100">
                 <img class="images-animation" src="/public/images/javascript.svg" alt="Javascript logo" width="100" height="100">
@@ -45,27 +45,27 @@
             </article>
 
             <section id="projects" class="container-projects">
-                <h2>Projects</h2>
+                <h2 class="reveal">Projects</h2>
                 <p></p>
                 
-                <article class="card">
+                <article class="card reveal-left">
                     <div class="card-image">
                     <img src="public/images/dmm.webp" alt="Screenshot of cuentos website">
                     </div>
-                    <h3>Dmm</h3>
-                    <p>Web application for a women's support organization to register and manage projects and beneficiaries.</p>
-                    <p><span>React</span> <span>Typescript</span> <span>Express.js</span></p>
-                    <a href="/dmm.html">See more</a>
+                    <h3 class="reveal-left">Dmm</h3>
+                    <p class="reveal-left">Web application for a women's support organization to register and manage projects and beneficiaries.</p>
+                    <p class="reveal-left"><span>React</span> <span>Typescript</span> <span>Express.js</span></p>
+                    <a class="reveal-left" href="/dmm.html">See more</a>
                 </article>
 
-                <article class="card">
+                <article class="card reveal-right">
                     <div class="card-image">
                     <img src="public/images/dmm.webp" alt="Screenshot of cuentos website">
                     </div>
-                    <h3>Fun AI tales</h3>
-                    <p>Interactive web application to create children's stories using AI with few inputs.</p>
-                    <p><span>React</span> <span>Typescript</span> <span>Express.js</span></p>
-                    <a href="/dmm.html">See more</a>
+                    <h3 class="reveal-right">Fun AI tales</h3>
+                    <p class="reveal-right">Interactive web application to create children's stories using AI with few inputs.</p>
+                    <p class="reveal-right"><span>React</span> <span>Typescript</span> <span>Express.js</span></p>
+                    <a class="reveal-right" href="/dmm.html">See more</a>
                 </article>
 
                 <!-- <article class="card">
@@ -90,4 +90,99 @@
 
         </footer>
     </body>
+    <script>
+        (function() {
+            const revealElements = document.querySelectorAll('.reveal');
+            if (!revealElements.length) return;
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.12,
+                    rootMargin: '0px 0px -40px 0px',
+                }
+            );
+
+            revealElements.forEach((el) => observer.observe(el));
+
+            // Revelar elementos visibles al cargar
+            window.addEventListener('load', () => {
+                revealElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        el.classList.add('visible');
+                        observer.unobserve(el);
+                    }
+                });
+            });
+        })();
+
+        (function() {
+            const revealElements = document.querySelectorAll('.reveal-left');
+            if (!revealElements.length) return;
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.12,
+                    rootMargin: '0px 0px -40px 0px',
+                }
+            );
+
+            revealElements.forEach((el) => observer.observe(el));
+
+            window.addEventListener('load', () => {
+                revealElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        el.classList.add('visible');
+                        observer.unobserve(el);
+                    }
+                });
+            });
+        })();
+
+        (function() {
+            const revealElements = document.querySelectorAll('.reveal-right');
+            if (!revealElements.length) return;
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.12,
+                    rootMargin: '0px 0px -40px 0px',
+                }
+            );
+
+            revealElements.forEach((el) => observer.observe(el));
+
+            window.addEventListener('load', () => {
+                revealElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        el.classList.add('visible');
+                        observer.unobserve(el);
+                    }
+                });
+            });
+        })();
+    </script>
 </html>
