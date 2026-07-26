@@ -27,11 +27,13 @@ header{
     justify-content: center;
     position: sticky;
     top: 0;
-    z-index: 10;
+    width: 100%;
+    z-index: 100;
     background-color: color-mix(in srgb, var(--secondary-color) 78%, transparent);
     backdrop-filter: blur(14px); 
     box-sizing: border-box;
-    min-height: 5vw;
+    height: 100%;
+    min-height: 64px;
 }
 
 header nav{
@@ -50,6 +52,23 @@ header a{
             text-shadow: 0 0 5px var(--primary-light-color);
         }
     }
+
+@media (max-width: 768px) {
+    header {
+        min-height: 64px;
+    }
+
+    header nav {
+        gap: 0.25rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header a {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.95rem;
+    }
+}
 
 hr{
     border: none;
@@ -295,13 +314,6 @@ hr{
     gap: 1rem;
 }
 
-@media (max-width: 940px){
-    .container-projects{
-        margin-top: 0rem;
-        grid-template-columns: 1fr;
-    }
-}
-
 .container-projects h2{
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -309,7 +321,7 @@ hr{
 }
 
 .card {
-    width: 420px;
+    width: 100%;
     height: 380px;
     display: grid;
     place-self: center;
@@ -339,7 +351,18 @@ hr{
     grid-row: auto;
 }
 
-@media (max-width: 940px){
+@media (max-width: 768px){
+    .container-projects {
+        margin-top: 0rem;
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 330px;
+    }
+    
     .card:first-child{
         grid-column: auto;
     }
@@ -374,7 +397,7 @@ hr{
 }
 
 .card-image{
-    width: 415.2px;
+    width: 100%;
     height: 220px;
     overflow: hidden;
     place-self: start;

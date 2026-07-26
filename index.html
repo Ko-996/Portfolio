@@ -9,6 +9,7 @@
         <link rel="icon" type="image/jpg" href="public/images/code.svg">
         <!-- <link rel="stylesheet" href="normalize.css"> -->
         <link rel="stylesheet" href="styles.css">
+        <script src="main.js" defer></script>
     </head>
     <body>
         <header class="bar">             
@@ -90,99 +91,4 @@
 
         </footer>
     </body>
-    <script>
-        (function() {
-            const revealElements = document.querySelectorAll('.reveal');
-            if (!revealElements.length) return;
-
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, {
-                    threshold: 0.12,
-                    rootMargin: '0px 0px -40px 0px',
-                }
-            );
-
-            revealElements.forEach((el) => observer.observe(el));
-
-            // Revelar elementos visibles al cargar
-            window.addEventListener('load', () => {
-                revealElements.forEach((el) => {
-                    const rect = el.getBoundingClientRect();
-                    if (rect.top < window.innerHeight && rect.bottom > 0) {
-                        el.classList.add('visible');
-                        observer.unobserve(el);
-                    }
-                });
-            });
-        })();
-
-        (function() {
-            const revealElements = document.querySelectorAll('.reveal-left');
-            if (!revealElements.length) return;
-
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, {
-                    threshold: 0.12,
-                    rootMargin: '0px 0px -40px 0px',
-                }
-            );
-
-            revealElements.forEach((el) => observer.observe(el));
-
-            window.addEventListener('load', () => {
-                revealElements.forEach((el) => {
-                    const rect = el.getBoundingClientRect();
-                    if (rect.top < window.innerHeight && rect.bottom > 0) {
-                        el.classList.add('visible');
-                        observer.unobserve(el);
-                    }
-                });
-            });
-        })();
-
-        (function() {
-            const revealElements = document.querySelectorAll('.reveal-right');
-            if (!revealElements.length) return;
-
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, {
-                    threshold: 0.12,
-                    rootMargin: '0px 0px -40px 0px',
-                }
-            );
-
-            revealElements.forEach((el) => observer.observe(el));
-
-            window.addEventListener('load', () => {
-                revealElements.forEach((el) => {
-                    const rect = el.getBoundingClientRect();
-                    if (rect.top < window.innerHeight && rect.bottom > 0) {
-                        el.classList.add('visible');
-                        observer.unobserve(el);
-                    }
-                });
-            });
-        })();
-    </script>
 </html>
