@@ -211,7 +211,7 @@ hr{
 }
 
 .about p{
-    margin-top: 1rem;
+    margin-top: 0rem;
     grid-column: 3/4;
     font-size: 1rem;
     color: var(--secondary-light-color);
@@ -251,6 +251,7 @@ hr{
     }
     
     .about p{
+        margin-top: 1rem;
         grid-column: 2/4;
         grid-row: 3/4;
         text-align: center;
@@ -268,13 +269,15 @@ hr{
     grid-row: 1/2;
     grid-column: 2/4 ;
     align-content: center;
-    
+    place-self: center;
+    font-size: 2rem;
 }
 
 .tech p{
     grid-row: 2/3;
     grid-column: 2/4 ; 
     color: var(--secondary-light-color);
+    text-align: center;
 }
 
 .tech div{
@@ -384,6 +387,7 @@ hr{
     grid-column: 1/-1;
     grid-row: 1/2;
     place-self: center;
+    font-size: 2rem;
 }
 
 .card {
@@ -492,37 +496,61 @@ hr{
 }
 
 .container-contact{
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-rows: auto;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container-contact h2{
     align-self: center;
     justify-self: end;
-    margin-right: 1rem;
-    grid-column: 2/3;
-    grid-row: 1/4;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .container-contact p{
-    grid-column: 3/4;
-    grid-row: 2/3;
     place-self: center;
 }
 
-.container-contact div{
-    grid-column: 3/4;
-    grid-row: 3/4;
-    place-self: center;
+.contact-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    justify-items: center;
 }
 
-.container-contact img{
-    margin: 1rem 0.5rem 1rem 0.5rem;
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    padding: 0.2rem 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+}
+
+.contact-link:hover {
+    transform: translateY(-3px) scale(1.04);
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.contact-link img {
+    margin: .7rem 0.2rem .7rem 0.2rem;
     padding: .1rem;
-    width: 3em;
-    height: 3em;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(1.08);
 }
 
+.contact-link span {
+    font-size: 0.95rem;
+}
