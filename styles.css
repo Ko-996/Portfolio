@@ -80,8 +80,8 @@ body::before {
         linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
     background-size: 60px 60px;
-    mask-image: radial-gradient(circle, black 70%, transparent 30%);
-    -webkit-mask-image: radial-gradient(circle, black 70%, transparent 30%);
+    mask-image: radial-gradient(circle, black 75%, transparent 25%);
+    -webkit-mask-image: radial-gradient(circle, black 75%, transparent 25%);
     /*mask-image: radial-gradient(ellipse 70% 70% at 50% 30%, black 30%, transparent 70%);
     -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 30%, black 30%, transparent 70%); */
 }
@@ -167,6 +167,18 @@ hr{
     transform: translateY(0);
 }
 
+.reveal.reveal-delay-1{
+    transition-delay: 0.2s;
+}
+
+.reveal.reveal-delay-2{
+    transition-delay: 0.4s;
+}
+
+.reveal.reveal-delay-3{
+    transition-delay: 0.6s;
+}
+
 .reveal-left {
     opacity: 0;
     transform: translateX(-30px);
@@ -190,6 +202,8 @@ hr{
     opacity: 1;
     transform: translateX(0);
 }
+
+
 
 .about{
     padding-top: 4rem;
@@ -462,7 +476,7 @@ hr{
     padding: .1rem .5rem;
     background-color: var(--secondary-dark);
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 5px;
     color: whitesmoke;
 }
 
@@ -487,6 +501,11 @@ hr{
 }
 
 .card a{
+    background-color: var(--secondary-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    text-decoration: none;
+    padding: .3rem .8rem;
     place-self: center;
     color: wheat;
     gap: rem;
@@ -495,11 +514,16 @@ hr{
     }
 }
 
+.card a.card-link{
+/*  TO DO */
+}
+
 .container-contact{
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 4rem;
 }
 
 .container-contact h2{
@@ -553,4 +577,16 @@ hr{
 
 .contact-link span {
     font-size: 0.95rem;
+}
+
+@media(max-width: 768px){
+    .container-contact{
+        margin-bottom: 3rem;
+    }
+
+    .contact-link img{
+        margin: .5rem 0.0rem .5rem 0.0rem;
+        width: 18px;
+        height: 18px;
+    }
 }
