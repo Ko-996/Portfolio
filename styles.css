@@ -167,18 +167,6 @@ hr{
     transform: translateY(0);
 }
 
-.reveal.reveal-delay-1{
-    transition-delay: 0.2s;
-}
-
-.reveal.reveal-delay-2{
-    transition-delay: 0.4s;
-}
-
-.reveal.reveal-delay-3{
-    transition-delay: 0.6s;
-}
-
 .reveal-left {
     opacity: 0;
     transform: translateX(-30px);
@@ -579,8 +567,31 @@ hr{
     box-shadow: 0 0 0 rgba(255, 255, 255, 0);
 }
 
-.contact-link:hover {
-    transform: translateY(-3px) scale(1.04);
+.contact-links.reveal .contact-link {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 700ms ease, transform 700ms ease, border-color 300ms ease, background 300ms ease, box-shadow 300ms ease;
+}
+
+.contact-links.reveal.visible .contact-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-links.reveal.visible .contact-link:nth-child(1) {
+    transition-delay: 0.15s;
+}
+
+.contact-links.reveal.visible .contact-link:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.contact-links.reveal.visible .contact-link:nth-child(3) {
+    transition-delay: 0.45s;
+}
+
+.contact-links.reveal .contact-link:hover {
+    transform: translateY(-3px);
     border-color: rgba(255, 255, 255, 0.35);
     background: rgba(255, 255, 255, 0.08);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
